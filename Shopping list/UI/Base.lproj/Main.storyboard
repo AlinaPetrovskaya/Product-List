@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MzM-P3-KKW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shopping List-->
+        <scene sceneID="MyD-9A-WnX">
+            <objects>
+                <viewController id="D6R-fQ-jJZ" customClass="ProductListViewController" customModule="Shopping_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vjg-CU-Its">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g6h-nX-bRb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.76862745099999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.95294117649999999" green="0.76862745099999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4e7-hf-9mB"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.76862745099999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4e7-hf-9mB" firstAttribute="trailing" secondItem="g6h-nX-bRb" secondAttribute="trailing" id="Pdn-y6-bJj"/>
+                            <constraint firstItem="4e7-hf-9mB" firstAttribute="bottom" secondItem="g6h-nX-bRb" secondAttribute="bottom" id="fBo-y4-ZoC"/>
+                            <constraint firstItem="g6h-nX-bRb" firstAttribute="top" secondItem="4e7-hf-9mB" secondAttribute="top" id="wXC-H3-nFT"/>
+                            <constraint firstItem="g6h-nX-bRb" firstAttribute="leading" secondItem="4e7-hf-9mB" secondAttribute="leading" id="wwe-gf-GH3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping List" id="eLL-Ta-kLz">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" style="plain" id="kfQ-7F-Fyr">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="editButtonTapped:" destination="D6R-fQ-jJZ" id="xgv-31-yFu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rGA-6K-W4O">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addNewItem:" destination="D6R-fQ-jJZ" id="fue-TG-s0X"/>
+                                <segue destination="TUm-Cu-5fY" kind="presentation" modalPresentationStyle="automatic" modalTransitionStyle="crossDissolve" id="keb-tR-NgT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="g6h-nX-bRb" id="HBI-se-vye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VC0-jG-XqA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="10.714285714285714"/>
+        </scene>
+        <!--AddItem-->
+        <scene sceneID="Ick-ZU-HWM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddItem" id="TUm-Cu-5fY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vXi-1t-iRG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ll9-8m-W18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1711" y="-5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fs4-l1-bYQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MzM-P3-KKW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xs6-0P-DWf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.76862745099999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D6R-fQ-jJZ" kind="relationship" relationship="rootViewController" id="YWs-sq-wvv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8dC-ln-6zE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="10.714285714285714"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,68 @@
+//
+//  ProductListViewController+Allert.swift
+//  Shopping list
+//
+//  Created by Виктор Петровский on 28.11.2020.
+//
+
+import UIKit
+
+extension ProductListViewController {
+    
+    func allertShow(currentName: String, currentDiscription: String, currentRaiting: Int, numberOFcell: IndexPath) -> UIAlertController {
+        
+        var nameField = UITextField() //хранит название нового списка
+        var descriptionField = UITextField()
+        var raitingField = UITextField()
+        
+        let allert = UIAlertController(title: "Edit Item", message: "", preferredStyle: .alert)
+        
+        let editAction = UIAlertAction(title: "Save changes", style: .destructive) { (action) in
+            
+            if let raiting = raitingField.text {
+                DataShoppingList.arrayOfProducts[numberOFcell.row].name = nameField.text ?? "No name"
+                DataShoppingList.arrayOfProducts[numberOFcell.row].description = descriptionField.text ?? ""
+                DataShoppingList.arrayOfProducts[numberOFcell.row].raiting = Int(raiting) ?? currentRaiting
+            }
+//            let encoder = PropertyListEncoder()
+//
+//            do {
+//                let data = try encoder.encode(self.arrayOfProducts)
+//                try data.write(to: self.dataFilePath!)
+//            } catch {
+//                print("Error encoding item array, \(error)")
+//            }
+            self.tableView.reloadRows(at: [numberOFcell], with: .automatic)
+        }
+        
+        let dismissAction = UIAlertAction(title: "Close", style: .cancel) { (action) in
+                self.dismiss(animated: true, completion: nil)
+            }
+        
+        allert.addTextField { (name) in // добавляем поле для ввода текста
+            name.text = currentName
+            name.placeholder = "Enter name"
+            nameField = name
+        }
+        
+        allert.addTextField { (description) in // добавляем поле для ввода текста
+            description.text = currentDiscription
+            description.placeholder = "Enter description of product"
+            descriptionField = description
+        }
+        
+        allert.addTextField { (raiting) in // добавляем поле для ввода текста
+            raiting.text = "\(currentRaiting)"
+            raiting.placeholder = "Value from 0 to 5"
+            raiting.keyboardType = .numberPad
+            raitingField = raiting
+        }
+        
+        allert.addAction(editAction) //вызываем действие и презентуем алерт
+        allert.addAction(dismissAction)
+//        present(allert, animated: true, completion: nil)
+        return allert
+    }
+
+    
+}
