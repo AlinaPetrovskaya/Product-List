@@ -15,12 +15,8 @@
 		68661986257182BD0070E0C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68661984257182BD0070E0C6 /* LaunchScreen.storyboard */; };
 		68661993257193C30070E0C6 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68661992257193C30070E0C6 /* ProductCell.xib */; };
 		686619A9257287220070E0C6 /* AddItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686619A8257287220070E0C6 /* AddItem.storyboard */; };
-		686619AE2572915D0070E0C6 /* ProductListViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619AD2572915D0070E0C6 /* ProductListViewController+UITableViewDelegate.swift */; };
-		686619B3257291FC0070E0C6 /* ProductListViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619B2257291FC0070E0C6 /* ProductListViewController+UITableViewDataSource.swift */; };
 		686619B62572923A0070E0C6 /* ModelShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619B52572923A0070E0C6 /* ModelShoppingList.swift */; };
 		686619BC257299580070E0C6 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619BB257299580070E0C6 /* ProductCell.swift */; };
-		686619C02572D6420070E0C6 /* ProductListViewController+UITextFieldDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619BF2572D6410070E0C6 /* ProductListViewController+UITextFieldDelegate .swift */; };
-		686619C32572D71F0070E0C6 /* ProductListViewController+Allert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619C22572D71F0070E0C6 /* ProductListViewController+Allert.swift */; };
 		686619CA25740F690070E0C6 /* DataShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619C925740F690070E0C6 /* DataShoppingList.swift */; };
 		686619CD2574115F0070E0C6 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619CC2574115F0070E0C6 /* AddItemViewController.swift */; };
 		68A325E62576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A325E52576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift */; };
@@ -38,12 +34,8 @@
 		68661987257182BD0070E0C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68661992257193C30070E0C6 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		686619A8257287220070E0C6 /* AddItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddItem.storyboard; sourceTree = "<group>"; };
-		686619AD2572915D0070E0C6 /* ProductListViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
-		686619B2257291FC0070E0C6 /* ProductListViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		686619B52572923A0070E0C6 /* ModelShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelShoppingList.swift; sourceTree = "<group>"; };
 		686619BB257299580070E0C6 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
-		686619BF2572D6410070E0C6 /* ProductListViewController+UITextFieldDelegate .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+UITextFieldDelegate .swift"; sourceTree = "<group>"; };
-		686619C22572D71F0070E0C6 /* ProductListViewController+Allert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductListViewController+Allert.swift"; sourceTree = "<group>"; };
 		686619C925740F690070E0C6 /* DataShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataShoppingList.swift; sourceTree = "<group>"; };
 		686619CC2574115F0070E0C6 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		68A325E52576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddItemViewController + UIPickerViewDataSource.swift"; sourceTree = "<group>"; };
@@ -95,10 +87,6 @@
 		686619B02572916D0070E0C6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				686619AD2572915D0070E0C6 /* ProductListViewController+UITableViewDelegate.swift */,
-				686619B2257291FC0070E0C6 /* ProductListViewController+UITableViewDataSource.swift */,
-				686619BF2572D6410070E0C6 /* ProductListViewController+UITextFieldDelegate .swift */,
-				686619C22572D71F0070E0C6 /* ProductListViewController+Allert.swift */,
 				68A325E52576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift */,
 				68A325E82576CC8800038ADB /* AddItemViewController + UIPickerViewDelegate.swift */,
 			);
@@ -199,14 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686619C02572D6420070E0C6 /* ProductListViewController+UITextFieldDelegate .swift in Sources */,
 				6866197E257182B80070E0C6 /* ProductListViewController.swift in Sources */,
 				686619B62572923A0070E0C6 /* ModelShoppingList.swift in Sources */,
-				686619AE2572915D0070E0C6 /* ProductListViewController+UITableViewDelegate.swift in Sources */,
-				686619B3257291FC0070E0C6 /* ProductListViewController+UITableViewDataSource.swift in Sources */,
 				6866197A257182B80070E0C6 /* AppDelegate.swift in Sources */,
 				686619BC257299580070E0C6 /* ProductCell.swift in Sources */,
-				686619C32572D71F0070E0C6 /* ProductListViewController+Allert.swift in Sources */,
 				6866197C257182B80070E0C6 /* SceneDelegate.swift in Sources */,
 				686619CA25740F690070E0C6 /* DataShoppingList.swift in Sources */,
 				686619CD2574115F0070E0C6 /* AddItemViewController.swift in Sources */,

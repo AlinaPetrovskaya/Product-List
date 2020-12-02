@@ -31,13 +31,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shopping List" id="eLL-Ta-kLz">
-                        <barButtonItem key="leftBarButtonItem" title="Sort" style="plain" id="kfQ-7F-Fyr">
+                        <barButtonItem key="leftBarButtonItem" title="Sort" id="kfQ-7F-Fyr">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="sortButtonTapped:" destination="D6R-fQ-jJZ" id="xgv-31-yFu"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rGA-6K-W4O">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rGA-6K-W4O">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addNewItemTapped:" destination="D6R-fQ-jJZ" id="fue-TG-s0X"/>
