@@ -9,7 +9,7 @@ import UIKit
 
 extension ProductListViewController {
     
-    func allertShow(currentName: String, currentDiscription: String, currentRaiting: Int, numberOFcell: IndexPath) -> UIAlertController {
+    func allertShow(currentName: String, currentDiscription: String, currentRaiting: Int, numberOFcell: IndexPath) {
         
         var nameField = UITextField() //хранит название нового списка
         var descriptionField = UITextField()
@@ -24,14 +24,7 @@ extension ProductListViewController {
                 DataShoppingList.arrayOfProducts[numberOFcell.row].description = descriptionField.text ?? ""
                 DataShoppingList.arrayOfProducts[numberOFcell.row].raiting = Int(raiting) ?? currentRaiting
             }
-//            let encoder = PropertyListEncoder()
-//
-//            do {
-//                let data = try encoder.encode(self.arrayOfProducts)
-//                try data.write(to: self.dataFilePath!)
-//            } catch {
-//                print("Error encoding item array, \(error)")
-//            }
+            self.saveData()
             self.tableView.reloadRows(at: [numberOFcell], with: .automatic)
         }
         
@@ -60,8 +53,8 @@ extension ProductListViewController {
         
         allert.addAction(editAction) //вызываем действие и презентуем алерт
         allert.addAction(dismissAction)
-//        present(allert, animated: true, completion: nil)
-        return allert
+        
+        self.present(allert, animated: true, completion: nil)
     }
 
     

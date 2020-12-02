@@ -10,7 +10,7 @@
         <!--Add Item View Controller-->
         <scene sceneID="fUN-cw-Bqh">
             <objects>
-                <viewController id="LCK-se-rd5" customClass="AddItemViewController" customModule="Shopping_list" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddItem" id="LCK-se-rd5" customClass="AddItemViewController" customModule="Shopping_list" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uH3-1Z-6d9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@
                     <connections>
                         <outlet property="descriptionTextField" destination="40g-DD-P3o" id="5vW-I6-nxi"/>
                         <outlet property="nameTextField" destination="PS7-4P-ogY" id="63V-hm-oxc"/>
-                        <outlet property="raitingValue" destination="8kI-rz-BaY" id="ZdZ-FJ-hbI"/>
+                        <outlet property="raitingPicker" destination="8kI-rz-BaY" id="ZdZ-FJ-hbI"/>
                         <outlet property="saveButton" destination="rMD-sh-Pxz" id="hCv-ZW-ERn"/>
                     </connections>
                 </viewController>

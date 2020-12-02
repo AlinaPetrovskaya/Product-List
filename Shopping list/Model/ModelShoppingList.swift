@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ModelShoppingList: Encodable {
+struct ModelShoppingList: Codable {
     var name: String
     var description: String
     var raiting: Int

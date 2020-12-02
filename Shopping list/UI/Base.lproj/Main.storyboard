@@ -31,17 +31,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Shopping List" id="eLL-Ta-kLz">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" style="plain" id="kfQ-7F-Fyr">
+                        <barButtonItem key="leftBarButtonItem" title="Sort" style="plain" id="kfQ-7F-Fyr">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="editButtonTapped:" destination="D6R-fQ-jJZ" id="xgv-31-yFu"/>
+                                <action selector="sortButtonTapped:" destination="D6R-fQ-jJZ" id="xgv-31-yFu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="rGA-6K-W4O">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="addNewItem:" destination="D6R-fQ-jJZ" id="fue-TG-s0X"/>
-                                <segue destination="TUm-Cu-5fY" kind="presentation" modalPresentationStyle="automatic" modalTransitionStyle="crossDissolve" id="keb-tR-NgT"/>
+                                <action selector="addNewItemTapped:" destination="D6R-fQ-jJZ" id="fue-TG-s0X"/>
+                                <segue destination="TUm-Cu-5fY" kind="presentation" identifier="ToAddItem" modalPresentationStyle="automatic" modalTransitionStyle="crossDissolve" id="keb-tR-NgT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -56,12 +56,12 @@
         <!--AddItem-->
         <scene sceneID="Ick-ZU-HWM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ll9-8m-W18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="AddItem" id="TUm-Cu-5fY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vXi-1t-iRG"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ll9-8m-W18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711" y="-5"/>
+            <point key="canvasLocation" x="1720" y="11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fs4-l1-bYQ">
