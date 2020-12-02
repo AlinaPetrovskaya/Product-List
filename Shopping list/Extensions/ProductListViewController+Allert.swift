@@ -18,10 +18,11 @@ extension ProductListViewController {
         let allert = UIAlertController(title: "Edit Item", message: "", preferredStyle: .alert)
         
         let editAction = UIAlertAction(title: "Save changes", style: .destructive) { (action) in
-            
+            guard let nametext = nameField.text, let descriptionText = descriptionField.text else { return }
             if let raiting = raitingField.text {
-                DataShoppingList.arrayOfProducts[numberOFcell.row].name = nameField.text ?? "No name"
-                DataShoppingList.arrayOfProducts[numberOFcell.row].description = descriptionField.text ?? ""
+                let name = nametext == "" ? "No name" : nametext
+                DataShoppingList.arrayOfProducts[numberOFcell.row].name = name
+                DataShoppingList.arrayOfProducts[numberOFcell.row].description = descriptionText
                 DataShoppingList.arrayOfProducts[numberOFcell.row].raiting = Int(raiting) ?? currentRaiting
             }
             self.saveData()

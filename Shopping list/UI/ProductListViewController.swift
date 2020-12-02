@@ -72,8 +72,6 @@ class ProductListViewController: UIViewController {
             } catch {
                 print("Error at reading data: \(error)")
             }
-            
-            
         }
     }
 }
