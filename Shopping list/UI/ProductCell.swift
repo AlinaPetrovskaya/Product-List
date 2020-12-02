@@ -34,5 +34,10 @@ class ProductCell: UITableViewCell {
     
     private func updateUI() {
         contentCellView.layer.cornerRadius = contentCellView.frame.height / 10
+        
+        contentCellView.layer.shadowColor   = UIColor.lightGray.cgColor
+        contentCellView.layer.shadowOpacity = 1
+        contentCellView.layer.shadowOffset  = .zero
+        contentCellView.layer.shadowRadius  = 2
     }
 }

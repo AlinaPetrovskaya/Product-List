@@ -22,7 +22,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4e7-hf-9mB"/>
-                        <color key="backgroundColor" red="0.95294117649999999" green="0.76862745099999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4e7-hf-9mB" firstAttribute="trailing" secondItem="g6h-nX-bRb" secondAttribute="trailing" id="Pdn-y6-bJj"/>
                             <constraint firstItem="4e7-hf-9mB" firstAttribute="bottom" secondItem="g6h-nX-bRb" secondAttribute="bottom" id="fBo-y4-ZoC"/>
@@ -56,10 +56,10 @@
         <!--AddItem-->
         <scene sceneID="Ick-ZU-HWM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ll9-8m-W18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="AddItem" id="TUm-Cu-5fY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vXi-1t-iRG"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ll9-8m-W18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1720" y="11"/>
         </scene>
@@ -71,7 +71,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xs6-0P-DWf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.95294117649999999" green="0.76862745099999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
