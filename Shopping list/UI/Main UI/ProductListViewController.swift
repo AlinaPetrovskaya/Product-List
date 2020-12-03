@@ -159,9 +159,10 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
             if let raiting = raitingField.text {
     
                 let name = nametext == "" ? "No name" : nametext
+                let description = descriptionText == "" ? " " : descriptionText
                 
                 DataShoppingList.arrayOfProducts[numberOFcell.row].name        = name
-                DataShoppingList.arrayOfProducts[numberOFcell.row].description = descriptionText
+                DataShoppingList.arrayOfProducts[numberOFcell.row].description = description
                 DataShoppingList.arrayOfProducts[numberOFcell.row].raiting     = Int(raiting) ?? currentRaiting
             }
             
