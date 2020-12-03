@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+class ProductListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
@@ -139,9 +139,6 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
         action.backgroundColor = .orange
         return action
     }
-    
-    //MARK: - UITextFieldDelegate
-    
     
     //MARK: - Alert
     private func alertShow(currentName: String, currentDiscription: String, currentRaiting: Int, numberOFcell: IndexPath) {
