@@ -19,8 +19,6 @@
 		686619BC257299580070E0C6 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619BB257299580070E0C6 /* ProductCell.swift */; };
 		686619CA25740F690070E0C6 /* DataShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619C925740F690070E0C6 /* DataShoppingList.swift */; };
 		686619CD2574115F0070E0C6 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686619CC2574115F0070E0C6 /* AddItemViewController.swift */; };
-		68A325E62576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A325E52576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift */; };
-		68A325E92576CC8800038ADB /* AddItemViewController + UIPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A325E82576CC8800038ADB /* AddItemViewController + UIPickerViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +36,6 @@
 		686619BB257299580070E0C6 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		686619C925740F690070E0C6 /* DataShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataShoppingList.swift; sourceTree = "<group>"; };
 		686619CC2574115F0070E0C6 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		68A325E52576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddItemViewController + UIPickerViewDataSource.swift"; sourceTree = "<group>"; };
-		68A325E82576CC8800038ADB /* AddItemViewController + UIPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddItemViewController + UIPickerViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,25 +68,12 @@
 		68661978257182B80070E0C6 /* Shopping list */ = {
 			isa = PBXGroup;
 			children = (
+				68A9FFC625795FD600AF48A3 /* Settings */,
+				68A9FFC525795FB900AF48A3 /* Core */,
+				68A9FFC425795F9C00AF48A3 /* Resourses */,
 				686619B9257295EF0070E0C6 /* UI */,
-				686619B82572929D0070E0C6 /* Model */,
-				686619B02572916D0070E0C6 /* Extensions */,
-				68661979257182B80070E0C6 /* AppDelegate.swift */,
-				6866197B257182B80070E0C6 /* SceneDelegate.swift */,
-				68661982257182BD0070E0C6 /* Assets.xcassets */,
-				68661984257182BD0070E0C6 /* LaunchScreen.storyboard */,
-				68661987257182BD0070E0C6 /* Info.plist */,
 			);
 			path = "Shopping list";
-			sourceTree = "<group>";
-		};
-		686619B02572916D0070E0C6 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				68A325E52576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift */,
-				68A325E82576CC8800038ADB /* AddItemViewController + UIPickerViewDelegate.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		686619B82572929D0070E0C6 /* Model */ = {
@@ -105,14 +88,65 @@
 		686619B9257295EF0070E0C6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				6866197F257182B80070E0C6 /* Main.storyboard */,
-				6866197D257182B80070E0C6 /* ProductListViewController.swift */,
-				686619A8257287220070E0C6 /* AddItem.storyboard */,
-				68661992257193C30070E0C6 /* ProductCell.xib */,
-				686619BB257299580070E0C6 /* ProductCell.swift */,
-				686619CC2574115F0070E0C6 /* AddItemViewController.swift */,
+				68A9FFC725795FEC00AF48A3 /* LaunchScreen */,
+				68A9FFC025795EA800AF48A3 /* Main UI */,
+				68A9FFC125795ECA00AF48A3 /* Add Item UI */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		68A9FFC025795EA800AF48A3 /* Main UI */ = {
+			isa = PBXGroup;
+			children = (
+				6866197F257182B80070E0C6 /* Main.storyboard */,
+				6866197D257182B80070E0C6 /* ProductListViewController.swift */,
+				68661992257193C30070E0C6 /* ProductCell.xib */,
+				686619BB257299580070E0C6 /* ProductCell.swift */,
+			);
+			path = "Main UI";
+			sourceTree = "<group>";
+		};
+		68A9FFC125795ECA00AF48A3 /* Add Item UI */ = {
+			isa = PBXGroup;
+			children = (
+				686619A8257287220070E0C6 /* AddItem.storyboard */,
+				686619CC2574115F0070E0C6 /* AddItemViewController.swift */,
+			);
+			path = "Add Item UI";
+			sourceTree = "<group>";
+		};
+		68A9FFC425795F9C00AF48A3 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				68661982257182BD0070E0C6 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		68A9FFC525795FB900AF48A3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				686619B82572929D0070E0C6 /* Model */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		68A9FFC625795FD600AF48A3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				68661979257182B80070E0C6 /* AppDelegate.swift */,
+				6866197B257182B80070E0C6 /* SceneDelegate.swift */,
+				68661987257182BD0070E0C6 /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		68A9FFC725795FEC00AF48A3 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				68661984257182BD0070E0C6 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,8 +228,6 @@
 				6866197C257182B80070E0C6 /* SceneDelegate.swift in Sources */,
 				686619CA25740F690070E0C6 /* DataShoppingList.swift in Sources */,
 				686619CD2574115F0070E0C6 /* AddItemViewController.swift in Sources */,
-				68A325E92576CC8800038ADB /* AddItemViewController + UIPickerViewDelegate.swift in Sources */,
-				68A325E62576CAEF00038ADB /* AddItemViewController + UIPickerViewDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8XDUUWJVM;
-				INFOPLIST_FILE = "Shopping list/Info.plist";
+				INFOPLIST_FILE = "Shopping list/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,7 +395,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8XDUUWJVM;
-				INFOPLIST_FILE = "Shopping list/Info.plist";
+				INFOPLIST_FILE = "Shopping list/Settings/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
