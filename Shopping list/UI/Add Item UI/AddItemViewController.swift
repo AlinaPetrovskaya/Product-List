@@ -23,16 +23,16 @@ class AddItemViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         super.viewDidLoad()
         
         raitingPicker.dataSource = self
-        raitingPicker.delegate = self
+        raitingPicker.delegate   = self
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector (self.tapContentView (_:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector (self.hideKeyboard (_:)))
         let tapMain = UITapGestureRecognizer(target: self, action: #selector (self.tapMainView (_:)))
         self.contentView.addGestureRecognizer(tap)
         self.mainView.addGestureRecognizer(tapMain)
         updateUI()
     }
     
-    @objc func tapContentView(_ sender:UITapGestureRecognizer) {
+    @objc func hideKeyboard(_ sender:UITapGestureRecognizer) {
         nameTextField.endEditing(true)
         descriptionTextField.endEditing(true)
     }
@@ -52,7 +52,6 @@ class AddItemViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         dismiss(animated: true, completion: nil)
     }
     
-    
     private func updateUI() {
         saveButton.layer.cornerRadius = saveButton.frame.height / 2
     }
@@ -70,5 +69,4 @@ class AddItemViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return "\(raitingValues[row])"
     }
-    
 }

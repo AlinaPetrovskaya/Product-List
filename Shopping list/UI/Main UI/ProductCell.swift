@@ -28,13 +28,10 @@ class ProductCell: UITableViewCell {
     
     private func setRaiting (raiting: Int) {
         raitingValue.progress = ((Float(raiting) * 100) / 500)
-//        let multipluer =
-//        raitingColor.widthAnchor.constraint(equalTo: raitingStars.widthAnchor, multiplier: CGFloat(multipluer)).isActive = true
     }
     
     private func updateUI() {
-        contentCellView.layer.cornerRadius = contentCellView.frame.height / 10
-        
+        contentCellView.layer.cornerRadius  = contentCellView.frame.height / 10
         contentCellView.layer.shadowColor   = UIColor.lightGray.cgColor
         contentCellView.layer.shadowOpacity = 1
         contentCellView.layer.shadowOffset  = .zero

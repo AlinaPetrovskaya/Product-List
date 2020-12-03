@@ -15,8 +15,8 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 100
-        tableView.delegate   = self
-        tableView.dataSource = self
+        tableView.delegate           = self
+        tableView.dataSource         = self
         tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         loadItems()
         
@@ -25,9 +25,10 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func sortButtonTapped(_ sender: UIBarButtonItem) {
         if tableView.isEditing {
             tableView.isEditing = false
-            sender.title = "Sort"
+            sender.title        = "Sort"
+            
         } else {
-            sender.title = "Done"
+            sender.title        = "Done"
             tableView.isEditing = true
         }
     }
@@ -63,6 +64,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     
     private func loadItems() {
         guard let dataFile = dataFilePath else { return }
+        
         if let data = try? Data(contentsOf: dataFile) {
             let decoder = PropertyListDecoder()
             do {
@@ -84,10 +86,10 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! ProductCell
-        cell.name.text = DataShoppingList.arrayOfProducts[indexPath.row].name
+        let cell                   = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! ProductCell
+        cell.name.text             = DataShoppingList.arrayOfProducts[indexPath.row].name
         cell.descriptionLabel.text = DataShoppingList.arrayOfProducts[indexPath.row].description
-        cell.raiting = DataShoppingList.arrayOfProducts[indexPath.row].raiting
+        cell.raiting               = DataShoppingList.arrayOfProducts[indexPath.row].raiting
         return cell
     }
     
@@ -120,7 +122,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.saveData()
         }
-        action.image = UIImage.init(systemName: "trash")
+        action.image           = UIImage.init(systemName: "trash")
         action.backgroundColor = .red
         
         return action
@@ -129,13 +131,15 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     private func editAction(at indexPath: IndexPath) -> UIContextualAction {
         
         let action = UIContextualAction(style: .normal, title: "Edit") { (_,_,success) in
+            
             let array = DataShoppingList.arrayOfProducts[indexPath.row]
             self.alertShow(currentName: array.name, currentDiscription: array.description, currentRaiting: array.raiting, numberOFcell: indexPath)
+            
             self.saveData()
             success(true)
         }
         
-        action.image = UIImage.init(systemName: "square.and.pencil")
+        action.image           = UIImage.init(systemName: "square.and.pencil")
         action.backgroundColor = .orange
         return action
     }
@@ -143,20 +147,24 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     //MARK: - Alert
     private func alertShow(currentName: String, currentDiscription: String, currentRaiting: Int, numberOFcell: IndexPath) {
         
-        var nameField = UITextField() //хранит название нового списка
+        var nameField        = UITextField()
         var descriptionField = UITextField()
-        var raitingField = UITextField()
+        var raitingField     = UITextField()
         
         let alert = UIAlertController(title: "Edit Item", message: "", preferredStyle: .alert)
         
         let editAction = UIAlertAction(title: "Save changes", style: .destructive) { (action) in
             guard let nametext = nameField.text, let descriptionText = descriptionField.text else { return }
+            
             if let raiting = raitingField.text {
+    
                 let name = nametext == "" ? "No name" : nametext
-                DataShoppingList.arrayOfProducts[numberOFcell.row].name = name
+                
+                DataShoppingList.arrayOfProducts[numberOFcell.row].name        = name
                 DataShoppingList.arrayOfProducts[numberOFcell.row].description = descriptionText
-                DataShoppingList.arrayOfProducts[numberOFcell.row].raiting = Int(raiting) ?? currentRaiting
+                DataShoppingList.arrayOfProducts[numberOFcell.row].raiting     = Int(raiting) ?? currentRaiting
             }
+            
             self.saveData()
             self.tableView.reloadRows(at: [numberOFcell], with: .automatic)
         }
@@ -165,26 +173,26 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
                 self.dismiss(animated: true, completion: nil)
             }
         
-        alert.addTextField { (name) in // добавляем поле для ввода текста
-            name.text = currentName
+        alert.addTextField { (name) in
+            name.text        = currentName
             name.placeholder = "Enter name"
-            nameField = name
+            nameField        = name
         }
         
-        alert.addTextField { (description) in // добавляем поле для ввода текста
-            description.text = currentDiscription
+        alert.addTextField { (description) in
+            description.text        = currentDiscription
             description.placeholder = "Enter description of product"
-            descriptionField = description
+            descriptionField        = description
         }
         
-        alert.addTextField { (raiting) in // добавляем поле для ввода текста
-            raiting.text = "\(currentRaiting)"
-            raiting.placeholder = "Value from 0 to 5"
+        alert.addTextField { (raiting) in
+            raiting.text         = "\(currentRaiting)"
+            raiting.placeholder  = "Value from 0 to 5"
             raiting.keyboardType = .numberPad
-            raitingField = raiting
+            raitingField         = raiting
         }
         
-        alert.addAction(editAction) //вызываем действие и презентуем алерт
+        alert.addAction(editAction)
         alert.addAction(dismissAction)
         
         self.present(alert, animated: true, completion: nil)
