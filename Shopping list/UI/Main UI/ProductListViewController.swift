@@ -40,10 +40,11 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationVC = segue.destination as? AddItemViewController else { return }
         
-        destinationVC.callback = { (name, description, raiting) in
+        destinationVC.callback = { [weak self] (name, description, raiting) in
             DataShoppingList.arrayOfProducts.append(ModelShoppingList(name: name,
                                                                       description: description,
                                                                       raiting: raiting))
+            guard let self = self else { return }
             self.saveData()
             self.reloadData()
         }
@@ -159,7 +160,7 @@ class ProductListViewController: UIViewController, UITableViewDataSource, UITabl
             if let raiting = raitingField.text {
     
                 let name = nametext == "" ? "No name" : nametext
-                let description = descriptionText == "" ? " " : descriptionText
+                let description = descriptionText == "" ? "" : descriptionText
                 
                 DataShoppingList.arrayOfProducts[numberOFcell.row].name        = name
                 DataShoppingList.arrayOfProducts[numberOFcell.row].description = description

@@ -98,10 +98,9 @@
 		68A9FFC025795EA800AF48A3 /* Main UI */ = {
 			isa = PBXGroup;
 			children = (
+				68A9FFC9257BCE0300AF48A3 /* Cells */,
 				6866197F257182B80070E0C6 /* Main.storyboard */,
 				6866197D257182B80070E0C6 /* ProductListViewController.swift */,
-				68661992257193C30070E0C6 /* ProductCell.xib */,
-				686619BB257299580070E0C6 /* ProductCell.swift */,
 			);
 			path = "Main UI";
 			sourceTree = "<group>";
@@ -147,6 +146,15 @@
 				68661984257182BD0070E0C6 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		68A9FFC9257BCE0300AF48A3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				68661992257193C30070E0C6 /* ProductCell.xib */,
+				686619BB257299580070E0C6 /* ProductCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

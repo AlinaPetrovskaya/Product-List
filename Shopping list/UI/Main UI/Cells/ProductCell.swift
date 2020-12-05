@@ -23,14 +23,14 @@ class ProductCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        updateUI()
+        setUp()
     }
     
     private func setRaiting (raiting: Int) {
-        raitingValue.progress = ((Float(raiting) * 100) / 500)
+        raitingValue.progress = (Float(raiting) / 5)
     }
     
-    private func updateUI() {
+    private func setUp() {
         contentCellView.layer.cornerRadius  = contentCellView.frame.height / 10
         contentCellView.layer.shadowColor   = UIColor.lightGray.cgColor
         contentCellView.layer.shadowOpacity = 1
